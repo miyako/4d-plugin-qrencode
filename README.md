@@ -22,3 +22,4 @@ WRITE PICTURE FILE(System folder(Desktop)+"qr-test.svg";$picture)
 
 SET PICTURE TO PASTEBOARD($picture)
 ```
+Pass a combination of flags to ```QR Mode Unicode```, ```QR Mode Kanji```, and ```QR Mode Micro``` to ```mode```.
