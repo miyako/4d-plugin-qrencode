@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EBC6B16F-1889-472C-A0F8-B63D743AF15F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>qrencode</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>14A1170720EFFC059A5F691BEAB7E2518AF2696E</key>
+		<string>https://github.com/miyako/4d-plugin-qrencode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>qrencode/v11/qrencode.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>14A1170720EFFC059A5F691BEAB7E2518AF2696E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/miyako/4d-plugin-qrencode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>14A1170720EFFC059A5F691BEAB7E2518AF2696E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>14A1170720EFFC059A5F691BEAB7E2518AF2696E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>4d-plugin-qrencode</string>
+		</dict>
+	</array>
+</dict>
+</plist>

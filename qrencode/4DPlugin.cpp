@@ -198,19 +198,16 @@ void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &
     int x, y = 0, i, j;
     
     p = qr->data;
-    
-    void (*_PA_YieldAbsolute)(void) = PA_YieldAbsolute;
-    
+        
     for(i = 0; i < qr->width; ++i) 
     {
-     
+        PA_YieldAbsolute();
         x = 0;
         sprintf(_y, "%d", y);
         
         for(j = 0; j < qr->width; ++j) 
         {
             sprintf(_x, "%d", x);
-            (*_PA_YieldAbsolute)(); 
             
             if(*p&1)
             {
@@ -347,6 +344,7 @@ void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &
                         /* data */
                         p = qr->data;
                         for(y=0; y<qr->width; y++) {
+                            PA_YieldAbsolute();
                             bit = 7;
                             memset(row, 0xff, (realwidth + 7) / 8);
                             q = row;
