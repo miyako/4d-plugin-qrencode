@@ -12,7 +12,6 @@
 #include "4DPluginAPI.h"
 #include "4DPlugin.h"
 
-
 void PluginMain(PA_long32 selector, PA_PluginParameters params)
 {
 	try
