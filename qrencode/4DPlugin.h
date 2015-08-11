@@ -27,9 +27,8 @@ enum output_type_t {
 #define QR_Mode_Kanji   0x0001
 #define QR_Mode_Micro   0x0002
 
-void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &returnValue);
-void setPicture(void *bytes, size_t len, C_PICTURE &returnValue, const char *type);
-void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &returnValue);
+void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult);
+void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult);
 
 void write_data_fn(png_structp png_ptr, png_bytep buf, png_size_t size);
 void output_flush_fn(png_structp png_ptr);

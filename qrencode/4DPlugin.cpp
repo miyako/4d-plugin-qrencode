@@ -54,7 +54,7 @@ void QRCODE(sLONG_PTR *pResult, PackagePtr pParams)
 	C_LONGINT _marigin;
 	C_LONGINT _dpi;
 	C_TEXT _dump;
-	C_PICTURE returnValue;
+//	C_PICTURE returnValue;
 
 	_data.fromParamAtIndex(pParams, 1);
 	_format.fromParamAtIndex(pParams, 2);
@@ -142,11 +142,11 @@ void QRCODE(sLONG_PTR *pResult, PackagePtr pParams)
         
         switch(type){
             case QR_OUTPUT_PNG:
-                toPNG(qr, margin, size, dpi, _dump, returnValue);
+                toPNG(qr, margin, size, dpi, _dump, pResult);
                 break;
                 
             case QR_OUTPUT_SVG:
-                toSVG(qr, margin, size, dpi, _dump, returnValue);
+                toSVG(qr, margin, size, dpi, _dump, pResult);
                 break;           
         }  
         
@@ -155,10 +155,10 @@ void QRCODE(sLONG_PTR *pResult, PackagePtr pParams)
     }
     
 	_dump.toParamAtIndex(pParams, 9);
-	returnValue.setReturn(pResult);
+//	returnValue.setReturn(pResult);
 }
 
-void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &returnValue)
+void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult)
 {
     margin = margin * size;
     
@@ -243,39 +243,12 @@ void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &
     CUTF8String _svg((const uint8_t *)svg.c_str());
     
     _dump.setUTF8String(&_svg);
-    
-    setPicture((void *)svg.c_str(), svg.size(), returnValue, ".svg");
-   
+
+    PA_Picture picture = PA_CreatePicture((void *)svg.c_str(), svg.size());
+    *(PA_Picture*) pResult = picture;
 }
 
-#define CMD_BLOB_TO_PICTURE 682  
-
-void setPicture(void *bytes, size_t len, C_PICTURE &image, const char *type)
-{
-    PA_Variable params[3];    
-    params[0] = PA_CreateVariable(eVK_Blob);
-    params[1] = PA_CreateVariable(eVK_Picture);
-    params[2] = PA_CreateVariable(eVK_Unistring);
-
-    PA_SetBlobVariable(&params[0], bytes, len);
-    
-    C_TEXT t;
-    t.setUTF8String((const uint8_t *)type, strlen(type));
-    PA_Unistring ext = PA_CreateUnistring((PA_Unichar *)t.getUTF16StringPtr());
-    PA_SetStringVariable(&params[2], &ext);
-    
-    PA_ExecuteCommandByID(CMD_BLOB_TO_PICTURE, params, 3);
-    
-    image.setPicture(PA_GetPictureVariable(params[1]));
-    
-    PA_DisposeUnistring(&ext);
-    
-    PA_ClearVariable(&params[2]);
-    PA_ClearVariable(&params[1]);    
-    PA_ClearVariable(&params[0]);
-}
-
-void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &returnValue)
+void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult)
 {
     unsigned int fg_color[4] = {0, 0, 0, 255};
     unsigned int bg_color[4] = {255, 255, 255, 255};
@@ -377,7 +350,8 @@ void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, C_PICTURE &
                         free(row);
                         free(palette);    
                         
-                        setPicture((void *)png.getBytesPtr(), png.getBytesLength(), returnValue, ".png");
+                        PA_Picture picture = PA_CreatePicture((void *)png.getBytesPtr(), png.getBytesLength());
+                        *(PA_Picture*) pResult = picture;
                         
                         png.toB64Text(&_dump);
   
