@@ -1,6 +1,19 @@
 # 4d-plugin-qrencode
 4D plugin to generate QR code.
 
+##Platform
+
+| carbon | cocoa | win32 | win64 |
+|:------:|:-----:|:---------:|:---------:|
+|10.6|10.8|🚫|🚫|
+
+Commands
+---
+
+```
+QRCODE
+```
+
 Example
 ---
 ```
