@@ -1,5 +1,5 @@
 # 4d-plugin-qrencode
-4D plugin to generate QR code.
+Generate QR code
 
 ### Platform
 
