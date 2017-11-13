@@ -33,6 +33,22 @@ inMargin|LONGINT|
 inDPI|LONGINT|
 outData|TEXT|
 
+```
+QRCODE ARRAY (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;inSize;inMargin;inDPI;outData)
+```
+
+Parameter|Type|Description
+------------|------------|----
+inData|TEXT|
+inOutputFormat|LONGINT|
+inMode|LONGINT|
+inErrorCorrectionLevel|LONGINT|
+inVersion|LONGINT|
+inSize|LONGINT|
+inMargin|LONGINT|
+inDPI|LONGINT|
+outData|ARRAY PICTURE|
+
 ## Examples
 
 ```
