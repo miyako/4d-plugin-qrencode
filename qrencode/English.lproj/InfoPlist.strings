@@ -1,1 +1,1 @@
-﻿/* Localized versions of Info.plist keys */CFBundleName = "qrencode";CFBundleShortVersionString = "1.0";CFBundleGetInfoString = "qrencode version 1.0, Copyright 2014 miyako.";
+﻿/* Localized versions of Info.plist keys */CFBundleName = "qrencode (with array)";CFBundleShortVersionString = "1.0";CFBundleGetInfoString = "qrencode version 2.0, Copyright 2016 miyako.";

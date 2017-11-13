@@ -1,1 +1,1 @@
-﻿{"name":"qrencode","id":20000,"commands":[{"theme":"qrencode","syntax":"QRCODE(&T;&L;&L;&L;&L;&L;&L;&L;&T):P"}]}
+﻿{"name":"qrencode","id":20000,"commands":[{"theme":"qrencode","syntax":"QRCODE(&T;&L;&L;&L;&L;&L;&L;&L;&T):P"},{"theme":"qrencode","syntax":"QRCODE ARRAY(&T;&L;&L;&L;&L;&L;&L;&L;&Y)"}]}

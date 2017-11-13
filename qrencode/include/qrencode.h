@@ -99,6 +99,12 @@
 #ifndef __QRENCODE_H__
 #define __QRENCODE_H__
 
+#if defined(WIN32)
+#define QREXTERN extern __declspec(dllexport)
+#else
+#define QREXTERN extern
+#endif
+
 #if defined(__cplusplus)
 extern "C" {
 #endif
@@ -423,7 +429,7 @@ extern QRcode *QRcode_encodeInput(QRinput *input);
  * @throw ENOMEM unable to allocate memory for input objects.
  * @throw ERANGE input data is too large.
  */
-__declspec(dllexport) QRcode *QRcode_encodeString(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
+QREXTERN QRcode *QRcode_encodeString(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
 
 /**
  * Same to QRcode_encodeString(), but encode whole data in 8-bit mode.
@@ -435,7 +441,7 @@ extern QRcode *QRcode_encodeString8bit(const char *string, int version, QRecLeve
  * Micro QR Code version of QRcode_encodeString().
  * @warning This function is THREAD UNSAFE when pthread is disabled.
  */
-__declspec(dllexport) QRcode *QRcode_encodeStringMQR(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
+QREXTERN QRcode *QRcode_encodeStringMQR(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
 
 /**
  * Micro QR Code version of QRcode_encodeString8bit().
@@ -455,19 +461,19 @@ extern QRcode *QRcode_encodeString8bitMQR(const char *string, int version, QRecL
  * @throw ENOMEM unable to allocate memory for input objects.
  * @throw ERANGE input data is too large.
  */
-__declspec(dllexport) QRcode *QRcode_encodeData(int size, const unsigned char *data, int version, QRecLevel level);
+QREXTERN QRcode *QRcode_encodeData(int size, const unsigned char *data, int version, QRecLevel level);
 
 /**
  * Micro QR Code version of QRcode_encodeData().
  * @warning This function is THREAD UNSAFE when pthread is disabled.
  */
-__declspec(dllexport) QRcode *QRcode_encodeDataMQR(int size, const unsigned char *data, int version, QRecLevel level);
+QREXTERN QRcode *QRcode_encodeDataMQR(int size, const unsigned char *data, int version, QRecLevel level);
 
 /**
  * Free the instance of QRcode class.
  * @param qrcode an instance of QRcode class.
  */
-__declspec(dllexport) void QRcode_free(QRcode *qrcode);
+QREXTERN void QRcode_free(QRcode *qrcode);
 
 /**
  * Create structured symbols from the input data.
@@ -496,7 +502,7 @@ extern QRcode_List *QRcode_encodeInputStructured(QRinput_Struct *s);
  * @throw EINVAL invalid input object.
  * @throw ENOMEM unable to allocate memory for input objects.
  */
-extern QRcode_List *QRcode_encodeStringStructured(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
+QREXTERN QRcode_List *QRcode_encodeStringStructured(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
 
 /**
  * Same to QRcode_encodeStringStructured(), but encode whole data in 8-bit mode.
@@ -517,20 +523,20 @@ extern QRcode_List *QRcode_encodeString8bitStructured(const char *string, int ve
  * @throw EINVAL invalid input object.
  * @throw ENOMEM unable to allocate memory for input objects.
  */
-extern QRcode_List *QRcode_encodeDataStructured(int size, const unsigned char *data, int version, QRecLevel level);
+QREXTERN QRcode_List *QRcode_encodeDataStructured(int size, const unsigned char *data, int version, QRecLevel level);
 
 /**
  * Return the number of symbols included in a QRcode_List.
  * @param qrlist a head entry of a QRcode_List.
  * @return number of symbols in the list.
  */
-extern int QRcode_List_size(QRcode_List *qrlist);
+QREXTERN int QRcode_List_size(QRcode_List *qrlist);
 
 /**
  * Free the QRcode_List.
  * @param qrlist a head entry of a QRcode_List.
  */
-extern void QRcode_List_free(QRcode_List *qrlist);
+QREXTERN void QRcode_List_free(QRcode_List *qrlist);
 
 
 /******************************************************************************
