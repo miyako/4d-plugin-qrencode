@@ -13,6 +13,10 @@ Generate QR code
 
 [libqrencode 4.0.0](https://fukuchi.org/works/qrencode/)
 
+### Releases
+
+[1.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/1.0)
+
 ---
 
 ## Syntax
