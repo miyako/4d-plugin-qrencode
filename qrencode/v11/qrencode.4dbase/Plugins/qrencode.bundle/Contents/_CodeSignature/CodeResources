@@ -94,7 +94,7 @@
 		</data>
 		<key>Resources/Documentation/index.html</key>
 		<data>
-		cUR9WMnR+y1eKoSb+zGIQgFM6QA=
+		g5a693crFZTUEIkQg40Tu43cI2Q=
 		</data>
 		<key>Resources/Documentation/styles/common.css</key>
 		<data>
@@ -104,18 +104,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Posii0uKILkqPxL2njbvV9VV9jI=
+			WvXRDJhO8tFFm9v1YRTmgf4JWXg=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		tJ6V5PIP952UXDNvWNJAt1YHx40=
+		G4rFmUdFIAbGoaODWV3kbIBX/N4=
 		</data>
 		<key>Resources/qrencode.rsrc</key>
 		<data>
-		kbJZHq+DLiX4uT8MbWB+3QTNruo=
+		QuY285BCQfBF5AHM2p19k8fMMYI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -377,11 +377,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cUR9WMnR+y1eKoSb+zGIQgFM6QA=
+			g5a693crFZTUEIkQg40Tu43cI2Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			eZKrb7LhCpEJs7Tidynt5OlqNY5gxW9s1SdW2VZbEN4=
+			NHfd8lq7Uf+3rzlq6uictHZF7YCud0lHT/sklZp3fK0=
 			</data>
 		</dict>
 		<key>Resources/Documentation/styles/common.css</key>
@@ -399,11 +399,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Posii0uKILkqPxL2njbvV9VV9jI=
+			WvXRDJhO8tFFm9v1YRTmgf4JWXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			/tUMb0YD+EWLm+4MojWrsQsukXY3llYxfN1DSXqhSFM=
+			9O4/c17QN8sNu57IMcHK9g46kaEcLi0E8KBI6ufFDfs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -412,132 +412,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tJ6V5PIP952UXDNvWNJAt1YHx40=
+			G4rFmUdFIAbGoaODWV3kbIBX/N4=
 			</data>
 			<key>hash2</key>
 			<data>
-			cxyGnnYv2gmtWYLV2AX8oFmrZdQM22t1sm+it9+iV9U=
+			A0jRcwFQfFOGcnOc+Z230hv3gTDq76EQswFfQ7Vs7Vk=
 			</data>
 		</dict>
 		<key>Resources/qrencode.rsrc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kbJZHq+DLiX4uT8MbWB+3QTNruo=
+			QuY285BCQfBF5AHM2p19k8fMMYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			OLJ5ebmfTx3r+3nZYlqbQ+aC2VO+E61WXS1KPwDYb64=
-			</data>
-		</dict>
-		<key>Windows/libpng16-16.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pB5uQTtFCfjDaOd1uCHZrKd1lTk=
-			</data>
-			<key>hash2</key>
-			<data>
-			Dr1C6aM0xw0F+Dn4JliznIQZMP7UVMqmnut8yDt5MzY=
-			</data>
-		</dict>
-		<key>Windows/libqrencode-3.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RaKu3GTgQ/KMyh+VyipUWlzdoOo=
-			</data>
-			<key>hash2</key>
-			<data>
-			KFqrWU+CVGjSA6vd9RAPMxPhSJPOEufIo9m5tTKu3D4=
+			tMq2UPMEjHoCuIeAu1l2HM7AsOz7WP+irC3xeVeybJo=
 			</data>
 		</dict>
 		<key>Windows/qrencode.4DX</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hOz01mismjhlhVRg3w4/oKBfpCw=
+			3W89B2zh9z5/my+Cj0P2tXM0Uns=
 			</data>
 			<key>hash2</key>
 			<data>
-			1F5wS6dPf8WelpKPX0LgZ3U/bkGQuu6xVhoemrQTrBM=
+			w2a1g2N8gqgSpNlx8AA1ro8ez8wVaymgi1crJ9Drikc=
 			</data>
 		</dict>
 		<key>Windows/qrencode.RSR</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yc56v6NaY8DNg0/w7jusLEiEusk=
+			QQjEeYaKLPviwP94IGQW37pZQiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			FZL3flMR5lzyZWqG17tqhbDn7XODAi4C1fZW4Wfw5jo=
-			</data>
-		</dict>
-		<key>Windows/zlib1.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jXu680tsvZO9HTz6drj40vaKyGg=
-			</data>
-			<key>hash2</key>
-			<data>
-			yiHfJ+XkzSa3EXXnVWbRFkjnhbjRDyXmO08UbZsCUfc=
-			</data>
-		</dict>
-		<key>Windows64/libpng16-16.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			v3oKLGsFdvkpNQeeOzru80CfP6Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			bQW+zr7BUuiv5r7yR/YGKeHHRLhoKIsGGgqQ5Ljkxxo=
-			</data>
-		</dict>
-		<key>Windows64/libqrencode-3.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			heZEAs4jNTEA21onkj/iTauvSTg=
-			</data>
-			<key>hash2</key>
-			<data>
-			BWAiK6l1WzQK1DVQq/E1dMXgTXExKZyrHjMdiVgr1/A=
+			U+XoFDA0ZFIsIh3U3mwaQJtWkIXDnOHBy+XNdtO/9UA=
 			</data>
 		</dict>
 		<key>Windows64/qrencode.4DX</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			B16xd4a32AcK/vYiJK0GOw5JIYE=
+			HCLU4jzGEpYAR2PEg94o0tJShrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			xRxnWqmqKVlFme1iy4d8jV9cC1KDuZ5aEg+spgZ0rFQ=
+			zg7xwZKwtza7ETD3p48EC91rdspRfPuK9FfVLMecISc=
 			</data>
 		</dict>
 		<key>Windows64/qrencode.RSR</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yc56v6NaY8DNg0/w7jusLEiEusk=
+			QQjEeYaKLPviwP94IGQW37pZQiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			FZL3flMR5lzyZWqG17tqhbDn7XODAi4C1fZW4Wfw5jo=
-			</data>
-		</dict>
-		<key>Windows64/zlib1.dll</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			bPv8pDpwr/suwcWD9KsKBrVEGow=
-			</data>
-			<key>hash2</key>
-			<data>
-			36IRT7SPfUJGrM/1MBGZCxluOdLlc3ag0qzDoXnbXRk=
+			U+XoFDA0ZFIsIh3U3mwaQJtWkIXDnOHBy+XNdtO/9UA=
 			</data>
 		</dict>
 	</dict>

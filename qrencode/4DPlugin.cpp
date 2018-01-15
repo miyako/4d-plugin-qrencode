@@ -284,97 +284,105 @@ void QRCODE(sLONG_PTR *pResult, PackagePtr pParams)
 	_margin.fromParamAtIndex(pParams, 7);
 	_dpi.fromParamAtIndex(pParams, 8);
     
-    int micro = (_mode.getIntValue() & QR_Mode_Micro);
-    int version = _version.getIntValue(); version = version > 0 ? version : 1;
-    int dpi = _dpi.getIntValue(); dpi = dpi > 0 ? dpi : 72;
-    int size = _size.getIntValue(); size = size > 0 ? size : 3;
-    int margin = _margin.getIntValue(); margin = margin < 0 ? 0 : margin;   
-    output_type_t type = _format.getIntValue() == QR_OUTPUT_SVG ? QR_OUTPUT_SVG : QR_OUTPUT_PNG;
-    QRencodeMode mode = (_mode.getIntValue() & QR_Mode_Kanji) ? QR_MODE_KANJI : QR_MODE_8;
-    QRecLevel level = (QRecLevel)_level.getIntValue(); level = level ? level : QR_ECLEVEL_L;
-    
-    unsigned int len = 0;
-        
-    uint32_t dataSize = (_data.getUTF16Length() * sizeof(PA_Unichar) * 2)+ sizeof(uint8_t);	
-    std::vector<char> buf(dataSize);
-    
-    PA_4DCharSet encoding;
-    
-    switch (mode) {
-        case QR_MODE_KANJI:
-            encoding = eVTC_SHIFT_JIS;			
-            break;			
-        default:
-            encoding = eVTC_UTF_8;			
-            break;
-    }
-    
-    len = PA_ConvertCharsetToCharset((char *)_data.getUTF16StringPtr(),
-                               _data.getUTF16Length() * sizeof(PA_Unichar),
-                               eVTC_UTF_16, 
-                               (char *)&buf[0],
-                               dataSize,
-                               encoding);	
-    
-    QRcode *qr = NULL;
-    
-    if(micro){
-        
-        if(mode == QR_MODE_KANJI){
-            
-            qr = QRcode_encodeStringMQR((const char *)&buf[0],
-                                        version,
-                                        level,
-                                        mode, 
-                                        1);
-            
-        }else{
-            
-            qr = QRcode_encodeDataMQR((int)len, 
-                                      (const unsigned char *)&buf[0], 
-                                      version, 
-                                      level);
-        }
-        
-    }else{
-        
-        if(mode == QR_MODE_KANJI){
-            
-            qr = QRcode_encodeString((const char *)&buf[0],
-                                     version,
-                                     level,
-                                     mode, 
-                                     1);
-            
-        }else{
-            
-            qr = QRcode_encodeData((int)len, 
-                                   (const unsigned char *)&buf[0], 
-                                   version, 
-                                   level);
-            
-        }
-        
-    }
-    
-    if(qr){
-        
-        switch(type){
-            case QR_OUTPUT_PNG:
-                toPNG(qr, margin, size, dpi, _dump, pResult);
-                break;
-                
-            case QR_OUTPUT_SVG:
-                toSVG(qr, margin, size, dpi, _dump, pResult);
-                break;           
-        }  
-        
-        QRcode_free(qr);
-        
-    }
-    
+	int micro = (_mode.getIntValue() & QR_Mode_Micro);
+	int swiss = (_mode.getIntValue() & QR_Mode_Swiss);
+	int version = _version.getIntValue(); version = version > 0 ? version : 1;
+	int dpi = _dpi.getIntValue(); dpi = dpi > 0 ? dpi : 72;
+	int size = _size.getIntValue(); size = size > 0 ? size : 3;
+	int margin = _margin.getIntValue(); margin = margin < 0 ? 0 : margin;
+	output_type_t type = _format.getIntValue() == QR_OUTPUT_SVG ? QR_OUTPUT_SVG : QR_OUTPUT_PNG;
+	QRencodeMode mode = (_mode.getIntValue() & QR_Mode_Kanji) ? QR_MODE_KANJI : QR_MODE_8;
+	QRecLevel level = (QRecLevel)_level.getIntValue(); level = level ? level : QR_ECLEVEL_L;
+	
+	unsigned int len = 0;
+	
+	uint32_t dataSize = (_data.getUTF16Length() * sizeof(PA_Unichar) * 2)+ sizeof(uint8_t);
+	std::vector<char> buf(dataSize);
+	
+	PA_4DCharSet encoding;
+	
+	switch (mode)
+	{
+		case QR_MODE_KANJI:
+			encoding = eVTC_SHIFT_JIS;
+			break;
+		default:
+			encoding = eVTC_UTF_8;
+			break;
+	}
+	
+	if (swiss)
+	{
+		encoding = eVTC_ISO_8859_1;
+		mode = QR_MODE_AN;
+	}
+	
+	len = PA_ConvertCharsetToCharset((char *)_data.getUTF16StringPtr(),
+																	 _data.getUTF16Length() * sizeof(PA_Unichar),
+																	 eVTC_UTF_16,
+																	 (char *)&buf[0],
+																	 dataSize,
+																	 encoding);
+	
+	QRcode *qr = NULL;
+	
+	if(micro){
+		
+		if(mode == QR_MODE_KANJI){
+			
+			qr = QRcode_encodeStringMQR((const char *)&buf[0],
+																	version,
+																	level,
+																	mode,
+																	1);
+			
+		}else{
+			
+			qr = QRcode_encodeDataMQR((int)len,
+																(const unsigned char *)&buf[0],
+																version,
+																level);
+		}
+		
+	}else{
+		
+		if(mode == QR_MODE_KANJI){
+			
+			qr = QRcode_encodeString((const char *)&buf[0],
+															 version,
+															 level,
+															 mode,
+															 1);
+			
+		}else{
+			
+			qr = QRcode_encodeData((int)len,
+														 (const unsigned char *)&buf[0],
+														 version,
+														 level);
+			
+		}
+		
+	}
+	
+	if(qr){
+		
+		switch(type){
+			case QR_OUTPUT_PNG:
+				toPNG(qr, margin, size, dpi, _dump, pResult);
+				break;
+				
+			case QR_OUTPUT_SVG:
+				toSVG(qr, margin, size, dpi, _dump, pResult);
+				break;
+		}
+		
+		QRcode_free(qr);
+		
+	}
+	
 	_dump.toParamAtIndex(pParams, 9);
-//	returnValue.setReturn(pResult);
+
 }
 
 void QRCODE_ARRAY(sLONG_PTR *pResult, PackagePtr pParams)

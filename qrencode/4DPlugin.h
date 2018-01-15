@@ -19,6 +19,10 @@ enum output_type_t {
     QR_OUTPUT_SVG
 };
 
+#ifdef _WIN32
+extern "C" { FILE __iob_func[3] = { *stdin,*stdout,*stderr }; }
+#endif
+
 #include "qrencode.h"
 #include "png.h"
 
@@ -27,6 +31,7 @@ enum output_type_t {
 #define QR_Mode_Unicode 0x0000
 #define QR_Mode_Kanji   0x0001
 #define QR_Mode_Micro   0x0002
+#define QR_Mode_Swiss   0x0004
 
 void toSVG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult);
 void toPNG(QRcode *qr, int margin, int size, int dpi, C_TEXT &_dump, sLONG_PTR *pResult);

@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>qrencode</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.4D.4DPlugin.qrencode-with-array</string>
+	<string>com.4D.qrencode-with-array</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -21,7 +21,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>15.1</string>
+	<string>2.0</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 	<key>DTCompiler</key>
