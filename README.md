@@ -15,7 +15,7 @@ Generate QR code using [libqrencode 4.0.0](https://fukuchi.org/works/qrencode/)
 
 [2.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/2.0) new constant ``QR Mode Latin``; added Swiss QR example
 
-![]<img src="https://user-images.githubusercontent.com/1725068/34925655-0806d86a-f9ee-11e7-90ae-1f4d2725af62.png" width="109" height="109" />
+<img src="https://user-images.githubusercontent.com/1725068/34925655-0806d86a-f9ee-11e7-90ae-1f4d2725af62.png" width="109" height="109" />
 
 [1.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/1.0)
 
