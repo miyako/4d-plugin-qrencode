@@ -78,6 +78,8 @@ SET PICTURE TO PASTEBOARD($picture)
 ```
 Pass a combination of flags to ```QR Mode Unicode```, ```QR Mode Kanji```, and ```QR Mode Micro``` to ```mode```.
 
+## Swiss
+
 ```
   //swiss qr iso-20022
 
