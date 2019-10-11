@@ -166,7 +166,7 @@ void QRCODE(PA_PluginParameters params) {
 
 void QRCODE_ARRAY(PA_PluginParameters params) {
     
-    sLONG_PTR *pResult = (sLONG_PTR *)params->fResult;
+//    sLONG_PTR *pResult = (sLONG_PTR *)params->fResult;
     PackagePtr pParams = (PackagePtr)params->fParameters;
 
     C_TEXT _data;

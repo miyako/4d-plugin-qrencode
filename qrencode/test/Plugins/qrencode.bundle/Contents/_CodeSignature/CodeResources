@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oGcBWXeNjuWfXYEryVq3Xao8kVg=
+			AdLazFQk5bFUf2j14Zhwo2bWO3A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -22,10 +22,6 @@
 	<dict>
 		<key>QuickLook/Thumbnail.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hC+U8EqvyIRM1lLakHLfvl4V9Tc=
-			</data>
 			<key>hash2</key>
 			<data>
 			nGfrvibB5KlzvZgF4Bra+l0HpRloxismgTLePnOwCdk=
@@ -33,23 +29,15 @@
 		</dict>
 		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oGcBWXeNjuWfXYEryVq3Xao8kVg=
-			</data>
 			<key>hash2</key>
 			<data>
-			ACySq4XWVtoB7Nkj/E194+1mgDpcAL7hy78s7AOqfgc=
+			5U9RRHvK2CltksQ1hNC7uTE8fnEk2YjFRCOT+o5Odek=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/constants.xlf</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			aDovS6vdO8pZkK1/AqqmfDsAgP4=
-			</data>
 			<key>hash2</key>
 			<data>
 			9jkacdy4//gyjqWJZ1rgXqUbZSFeBNy6cwjzB3Woo6Y=
@@ -57,10 +45,6 @@
 		</dict>
 		<key>Windows/qrencode.4DX</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HS9DElRZ+l4KvXzVVFTEq+0T+To=
-			</data>
 			<key>hash2</key>
 			<data>
 			ywpk7Oi4gdZO5yqUhyp28kMO9PE8Optv+Z3aBTKla8g=
@@ -68,10 +52,6 @@
 		</dict>
 		<key>Windows64/qrencode.4DX</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oNCgykoBaS/FZIvNXB1dxKI9pKo=
-			</data>
 			<key>hash2</key>
 			<data>
 			yVv3ueO+JYICHwVdcwmygwUjWHxb98zT7d/Jn30U3RM=
@@ -81,7 +61,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			JIswb+3kKrppVcqSQb+ctzlObVg=
+			S8xo3kRXHONPaLDKVuJp85MBDvA=
 			</data>
 			<key>requirement</key>
 			<string>identifier manifest and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: keisuke miyako (4W9UT59D3B)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
