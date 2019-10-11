@@ -23,7 +23,7 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 ### Syntax
 
-[miyako.github.io](https://miyako.github.io/2019/11/11/4d-plugin-qrencode.html)
+[miyako.github.io](https://miyako.github.io/2019/10/11/4d-plugin-qrencode.html)
 
 ### Examples
 
