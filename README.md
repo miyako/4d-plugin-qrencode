@@ -5,8 +5,6 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 ### Platform
 
-### Platform
-
 | carbon | cocoa | win32 | win64 |
 |:------:|:-----:|:---------:|:---------:|
 ||<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|
@@ -21,19 +19,13 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 [3.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/3.0)
 
-**New!**
-
-
-
-[1.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/1.0)
-
 ---
 
 ### Syntax
 
 [miyako.github.io](https://miyako.github.io/2019/11/11/4d-plugin-qrencode.html)
 
-## Examples
+### Examples
 
 ```
 C_TEXT($data)
@@ -56,7 +48,7 @@ SET PICTURE TO PASTEBOARD($picture)
 ```
 Pass a combination of flags to ```QR Mode Unicode```, ```QR Mode Kanji```, and ```QR Mode Micro``` to ```mode```.
 
-## Swiss
+#### Swiss
 
 ```
   //swiss qr iso-20022
@@ -169,7 +161,7 @@ SET PICTURE TO PASTEBOARD($picture)
 WRITE PICTURE FILE(System folder(Desktop)+"qr-test.png";$picture)
 ```
 
-* QRCH
+#### QRCH
 
 ```
 C_OBJECT($1;$QRCH)
