@@ -13,11 +13,11 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 <img src="https://user-images.githubusercontent.com/1725068/41266195-ddf767b2-6e30-11e8-9d6b-2adf6a9f57a5.png" width="32" height="32" />
 
-![preemption xx](https://user-images.githubusercontent.com/1725068/41327179-4e839948-6efd-11e8-982b-a670d511e04f.png)
+**not thread safe**
 
 ### Releases
 
-[3.0](https://github.com/miyako/4d-plugin-qrencode/releases/tag/3.0)
+[3.1](https://github.com/miyako/4d-plugin-qrencode/releases/tag/3.1)
 
 ---
 
