@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AdLazFQk5bFUf2j14Zhwo2bWO3A=
+			K1CnSzZOp/EASoUUlRTBth1uOlg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -31,7 +31,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5U9RRHvK2CltksQ1hNC7uTE8fnEk2YjFRCOT+o5Odek=
+			o2cV7A9WD+Zkln0pk+BuymhNOot3BaYvFkCqRYqZ3Mc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -61,10 +61,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			S8xo3kRXHONPaLDKVuJp85MBDvA=
+			dTh7IkZJ5jqPXN9LEPliZEdaO5w=
 			</data>
 			<key>requirement</key>
-			<string>identifier manifest and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: keisuke miyako (4W9UT59D3B)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+			<string>identifier manifest and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
 		</dict>
 	</dict>
 	<key>rules</key>
