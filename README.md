@@ -15,10 +15,6 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 **not thread safe**
 
-### Releases
-
-[3.2.1](https://github.com/miyako/4d-plugin-qrencode/releases/tag/3.2.1)
-
 ---
 
 ### Syntax
